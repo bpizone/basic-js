@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>samuraj 1</title>
+</head>
+<body>
+<form id="myForm">
+  <label for="formAge">Wpisz wiek</label>
+  <input type="text" id="formAge" name="age">
+  <button type="submit">Sprawdź</button>
+  <p>barnej</p>
+  <p>dobry</p>
+  <p>ziomek</p>
+</form>
+
+  <script>
+ //podpinamy się pod wysyłanie formularza
+  document.querySelector('#myForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    //pobieramy wartość pola #formAge
+    const age = document.querySelector('#formAge').value;
+
+    //w zmiennej age jest tekst wpisany w formularz.
+    //zamień go na liczbę i sprawdź czy po zamianie masz liczbę czy nie liczbę
+    //jeżeli liczba jest większa lub równa 18, wypisz w konsoli
+    //"wszystko ok", w przeciwnym razie wypisz "niestety, dostęp zablokowany"
+
+    numbAge = parseInt(age, 10);
+    (numbAge >= 18 && !isNaN(ageNr))?console.log('you\'re mature, access submited'):console.log('access denied')
+
+    //kod pisz tutaj, przed poniższą klamrą i nawiasem
+})
+
+  </script>
+</body>
+</html>
